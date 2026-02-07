@@ -93,34 +93,7 @@
 
 ---
 
-## 8. Environment Setup
-
-**Prerequisites**: [e.g., Node.js 20+]
-
-### Frontend Setup
-
-```bash
-# [Install command - e.g., npm install]
-# [Start command - e.g., npm run dev]
-# [Build command - e.g., npm run build]
-# [Test command - e.g., npm run test]
-```
-
-**Environment Variables**:
-
-```env
-# API
-VITE_API_URL=
-VITE_API_KEY=
-# Auth
-VITE_AUTH_DOMAIN=
-# External Services
-VITE_ANALYTICS_ID=
-```
-
----
-
-## 9. Testing Strategy
+## 8. Testing Strategy
 
 - **Unit Test Coverage**: [e.g., 70% for components and utilities]
 - **Integration Tests**: [e.g., Key user flows]
@@ -130,7 +103,7 @@ VITE_ANALYTICS_ID=
 
 ---
 
-## 10. UI/UX Configuration
+## 9. UI/UX Configuration
 
 ### Design System
 
@@ -163,7 +136,7 @@ VITE_ANALYTICS_ID=
 
 ---
 
-## 11. Architecture Notes
+## 10. Architecture Notes
 
 **Why this stack?**
 [Brief explanation of why you chose these technologies]
@@ -177,7 +150,7 @@ VITE_ANALYTICS_ID=
 
 ---
 
-## 12. Optional: Additional Information
+## 11. Optional: Additional Information
 
 ### Third-Party Services (if used)
 

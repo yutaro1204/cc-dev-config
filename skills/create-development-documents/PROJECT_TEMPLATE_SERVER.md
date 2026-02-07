@@ -104,36 +104,7 @@
 
 ---
 
-## 8. Environment Setup
-
-**Prerequisites**: [e.g., Node.js 20+, Docker, PostgreSQL]
-
-### Backend Setup
-
-```bash
-# [Install command - e.g., npm install]
-# [Setup services - e.g., docker-compose up -d]
-# [Database setup - e.g., npm run db:migrate]
-# [Seed data - e.g., npm run db:seed]
-# [Start command - e.g., npm run dev]
-```
-
-**Environment Variables**:
-
-```env
-# Database
-DATABASE_URL=
-# Auth
-JWT_SECRET=
-# External Services
-API_KEY=
-# Redis
-REDIS_URL=
-```
-
----
-
-## 9. Testing Strategy
+## 8. Testing Strategy
 
 - **Unit Test Coverage**: [e.g., 80% business logic]
 - **Integration Tests**: [e.g., All API endpoints]
@@ -142,7 +113,7 @@ REDIS_URL=
 
 ---
 
-## 10. Backend Configuration
+## 9. Backend Configuration
 
 ### API Design
 
@@ -176,7 +147,7 @@ REDIS_URL=
 
 ---
 
-## 11. Architecture Notes
+## 10. Architecture Notes
 
 **Why this stack?**
 [Brief explanation of why you chose these technologies]
@@ -188,7 +159,7 @@ REDIS_URL=
 
 ---
 
-## 12. Optional: Additional Information
+## 11. Optional: Additional Information
 
 ### Third-Party Services (if used)
 
