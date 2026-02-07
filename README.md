@@ -37,6 +37,12 @@ If CLAUDE.md file is too large, then divide the contents into rules files in .cl
 If you use --dangerously-skip-permissions option, execute Claude Code command in Dev Container.
 https://code.claude.com/docs/en/devcontainer
 
+.devcontainer directory should be in the root directory of your project, so copy .devcontainer directory.
+
+```bash
+$ cp -r .claude/.devcontainer .devcontainer
+```
+
 ### Permissions
 
 Add permissions to settings.json if there are files and directories Claude Code should not edit and read.
