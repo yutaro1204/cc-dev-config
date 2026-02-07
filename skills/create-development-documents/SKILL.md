@@ -12,16 +12,25 @@ This skill creates comprehensive development documents for the project based on 
 
 **For developers setting up a new project:**
 
-1. **Copy the project template**: Find `PROJECT_TEMPLATE.md` in this skill directory
+1. **Choose and copy the appropriate project template**:
+   - `PROJECT_TEMPLATE.md` - For full-stack projects
+   - `PROJECT_TEMPLATE_CLIENT.md` - For client/frontend-only projects
+   - `PROJECT_TEMPLATE_SERVER.md` - For server/backend-only projects
 2. **Fill in your project details**: Replace all `[FILL IN]` sections with your actual technology stack, requirements, and specifications
 3. **Save your filled template**: Keep it as `PROJECT_SPEC.md` or similar in your project root or `.claude/` directory
 4. **Invoke this skill**: Reference your filled template, and the skill will generate all 8 documentation files in `docs/`
 
-**Template Location**: `.claude/skills/create-development-documents/PROJECT_TEMPLATE.md`
+**Template Locations**:
+- `.claude/skills/create-development-documents/PROJECT_TEMPLATE.md` (full-stack)
+- `.claude/skills/create-development-documents/PROJECT_TEMPLATE_CLIENT.md` (client)
+- `.claude/skills/create-development-documents/PROJECT_TEMPLATE_SERVER.md` (server)
 
-**What the template includes:**
+**What the templates include:**
 
 - Technology stack configuration (frontend, backend, database, cache, testing, etc.)
+  - Full-stack template: Both frontend and backend sections
+  - Client template: Frontend-focused sections with UI/UX details
+  - Server template: Backend-focused sections with API and infrastructure details
 - Product requirements (business model, features, non-functional requirements)
 - Functional design (user flows, data models, routes, API endpoints)
 - Architecture decisions and rationale
@@ -275,9 +284,9 @@ List all environment variables needed:
 
 ## Recommended Approach (For New Projects)
 
-**If a filled PROJECT_TEMPLATE.md exists:**
+**If a filled project template exists:**
 
-1. **Read the filled project template**: Look for `PROJECT_SPEC.md`, `PROJECT_TEMPLATE.md` (filled), or similar in project root or `.claude/` directory
+1. **Read the filled project template**: Look for `PROJECT_SPEC.md` or filled versions of `PROJECT_TEMPLATE.md`, `PROJECT_TEMPLATE_CLIENT.md`, or `PROJECT_TEMPLATE_SERVER.md` in project root or `.claude/` directory
 2. **Extract project-specific information** from the filled template (tech stack, requirements, etc.)
 3. **Read the appropriate document template** from `.claude/skills/create-development-documents/examples/[document-name].md`
 4. **Replace template placeholders** with information from the filled project template

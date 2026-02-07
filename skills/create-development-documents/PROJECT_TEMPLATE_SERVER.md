@@ -1,4 +1,4 @@
-# Project Specification Template
+# Server Project Specification Template
 
 > **Instructions**: Fill in the essential information below. The skill will gather additional details from your codebase as needed.
 
@@ -7,21 +7,13 @@
 ## 1. Project Basics
 
 - **Project Name**: [Your project name]
-- **Project Type**: [e.g., E-commerce, SaaS, API, Dashboard, Mobile app]
+- **Project Type**: [e.g., REST API, GraphQL API, Microservice, gRPC Service]
 - **Description**: [1-2 sentence description]
 - **Core Problem Solved**: [What problem does this solve?]
 
 ---
 
 ## 2. Technology Stack
-
-### Frontend
-
-- **Framework**: [e.g., React Router v7, Next.js, Vue, Angular, None]
-- **Language**: [e.g., TypeScript, JavaScript]
-- **State Management**: [e.g., React Context, Redux, Zustand, None]
-- **Styling**: [e.g., Tailwind CSS, CSS Modules, SCSS]
-- **Build Tool**: [e.g., Vite, Webpack, Turbopack]
 
 ### Backend
 
@@ -41,7 +33,7 @@
 - **Storage**: [e.g., S3, Local, Cloud Storage, None]
 - **Search**: [e.g., Elasticsearch, Algolia, MeiliSearch, None]
 - **Container**: [e.g., Docker Compose, Kubernetes, None]
-- **Cloud/Hosting**: [e.g., AWS, Vercel, Railway, Self-hosted]
+- **Cloud/Hosting**: [e.g., AWS, Railway, Self-hosted]
 
 ### Observability
 
@@ -52,7 +44,6 @@
 ### Testing & Tools
 
 - **Unit/Integration Test**: [e.g., Vitest, Jest, Pytest, JUnit]
-- **E2E Framework**: [e.g., Playwright, Cypress, None]
 - **API Testing**: [e.g., Supertest, Postman, REST Client]
 - **Package Manager**: [e.g., npm, pnpm, pip, yarn, cargo]
 
@@ -61,61 +52,53 @@
 ## 3. Key Features (3-5 main features)
 
 1. [Feature 1 - e.g., User authentication and authorization]
-2. [Feature 2 - e.g., Product catalog with search]
-3. [Feature 3 - e.g., Shopping cart and checkout]
-4. [Feature 4 - e.g., Admin dashboard]
-5. [Feature 5 - e.g., Order management]
+2. [Feature 2 - e.g., Product catalog API with search]
+3. [Feature 3 - e.g., Order processing and management]
+4. [Feature 4 - e.g., Real-time notifications]
+5. [Feature 5 - e.g., Admin API endpoints]
 
 ---
 
-## 4. Core User Flows (Top 2-3)
+## 4. Core API Flows (Top 2-3)
 
-**Flow 1: [e.g., User Registration]**
+**Flow 1: [e.g., User Authentication Flow]**
 
-1. [Step 1]
-2. [Step 2]
-3. [Step 3]
+1. [Step 1 - e.g., Client sends credentials to /api/auth/login]
+2. [Step 2 - e.g., Server validates credentials and generates JWT]
+3. [Step 3 - e.g., Client receives token and uses for subsequent requests]
 
-**Flow 2: [e.g., Purchase Flow]**
+**Flow 2: [e.g., Order Creation Flow]**
 
-1. [Step 1]
-2. [Step 2]
-3. [Step 3]
+1. [Step 1 - e.g., Client sends order data to /api/orders]
+2. [Step 2 - e.g., Server validates, processes payment, creates order]
+3. [Step 3 - e.g., Background job sends confirmation email]
 
 ---
 
 ## 5. Data Models (Top 3-5 entities)
 
-1. **[Entity 1 - e.g., User]**: id, email, name, password_hash
-2. **[Entity 2 - e.g., Product]**: id, name, price, description, stock
-3. **[Entity 3 - e.g., Order]**: id, user_id, status, total, items
+1. **[Entity 1 - e.g., User]**: id, email, name, password_hash, role, created_at
+2. **[Entity 2 - e.g., Product]**: id, name, price, description, stock, category_id
+3. **[Entity 3 - e.g., Order]**: id, user_id, status, total, items, created_at
 
 ---
 
-## 6. Main Routes/Endpoints (Top 5-10)
+## 6. API Endpoints (Top 5-10)
 
-### Frontend Routes (if applicable)
-
-| Path         | Description    | Auth? |
-| ------------ | -------------- | ----- |
-| `/`          | Home page      | No    |
-| `/login`     | Login page     | No    |
-| `/dashboard` | User dashboard | Yes   |
-
-### API Endpoints
-
-| Method | Path              | Description    | Auth? |
-| ------ | ----------------- | -------------- | ----- |
-| GET    | `/api/products`   | List products  | No    |
-| POST   | `/api/orders`     | Create order   | Yes   |
-| GET    | `/api/orders/:id` | Get order      | Yes   |
-| PUT    | `/api/users/:id`  | Update user    | Yes   |
+| Method | Path              | Description       | Auth? |
+| ------ | ----------------- | ----------------- | ----- |
+| POST   | `/api/auth/login` | User login        | No    |
+| GET    | `/api/products`   | List products     | No    |
+| GET    | `/api/products/:id` | Get product     | No    |
+| POST   | `/api/orders`     | Create order      | Yes   |
+| GET    | `/api/orders/:id` | Get order         | Yes   |
+| PUT    | `/api/users/:id`  | Update user       | Yes   |
 
 ---
 
 ## 7. Domain Terminology (3-5 key terms)
 
-1. **[Term 1 - e.g., User]**: [Person who purchases products]
+1. **[Term 1 - e.g., User]**: [Authenticated account holder]
 2. **[Term 2 - e.g., Seller]**: [Person who lists products for sale]
 3. **[Term 3 - e.g., Order]**: [A purchase transaction with payment]
 
@@ -125,18 +108,10 @@
 
 **Prerequisites**: [e.g., Node.js 20+, Docker, PostgreSQL]
 
-### Frontend Setup (if applicable)
-
-```bash
-# [Install command - e.g., cd frontend && npm install]
-# [Start command - e.g., npm run dev]
-# [Build command - e.g., npm run build]
-```
-
 ### Backend Setup
 
 ```bash
-# [Install command - e.g., cd backend && npm install]
+# [Install command - e.g., npm install]
 # [Setup services - e.g., docker-compose up -d]
 # [Database setup - e.g., npm run db:migrate]
 # [Seed data - e.g., npm run db:seed]
@@ -152,6 +127,8 @@ DATABASE_URL=
 JWT_SECRET=
 # External Services
 API_KEY=
+# Redis
+REDIS_URL=
 ```
 
 ---
@@ -160,7 +137,7 @@ API_KEY=
 
 - **Unit Test Coverage**: [e.g., 80% business logic]
 - **Integration Tests**: [e.g., All API endpoints]
-- **E2E Tests**: [e.g., Critical user flows only]
+- **Load Testing**: [e.g., Critical endpoints only]
 - **Testing Philosophy**: [e.g., TDD, Test-after, None]
 
 ---
@@ -207,7 +184,7 @@ API_KEY=
 **Key Constraints**:
 [Any important technical or business constraints]
 
-**Separation of Concerns**: [e.g., Monorepo, Separate repos, Monolith]
+**Architecture Pattern**: [e.g., Layered, Clean Architecture, Hexagonal, MVC]
 
 ---
 
@@ -220,12 +197,11 @@ API_KEY=
 - **Email**: [e.g., SendGrid, Resend, Mailgun, None]
 - **SMS**: [e.g., Twilio, None]
 - **Analytics**: [e.g., Google Analytics, Mixpanel, None]
-- **CDN**: [e.g., CloudFlare, CloudFront, None]
 
 ### Non-Functional Requirements
 
-- **Performance**: [e.g., API response < 200ms p95, Page load < 2s]
-- **Scalability**: [e.g., Handle 10k concurrent users]
+- **Performance**: [e.g., API response < 200ms p95]
+- **Scalability**: [e.g., Handle 10k concurrent requests]
 - **Availability**: [e.g., 99.9% uptime]
 - **Security**: [e.g., HTTPS, Rate limiting, Auth required]
 - **Compliance**: [e.g., GDPR, HIPAA, SOC2, None]

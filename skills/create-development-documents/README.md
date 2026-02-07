@@ -6,10 +6,12 @@ This skill generates comprehensive development documentation for software projec
 
 ```
 create-development-documents/
-├── SKILL.md                 # Skill configuration and instructions
-├── PROJECT_TEMPLATE.md      # Template for developers to fill in
-├── README.md               # This file
-└── examples/               # System-agnostic document templates
+├── SKILL.md                    # Skill configuration and instructions
+├── PROJECT_TEMPLATE.md         # Full-stack template
+├── PROJECT_TEMPLATE_CLIENT.md  # Client/Frontend template
+├── PROJECT_TEMPLATE_SERVER.md  # Server/Backend template
+├── README.md                   # This file
+└── examples/                   # System-agnostic document templates
     ├── architecture.md
     ├── development-guidelines.md
     ├── environments.md
@@ -24,10 +26,21 @@ create-development-documents/
 
 ### For Developers Setting Up a New Project
 
-1. **Copy the project template**
+1. **Choose and copy the appropriate project template**
 
+   For full-stack projects:
    ```bash
    cp .claude/skills/create-development-documents/PROJECT_TEMPLATE.md PROJECT_SPEC.md
+   ```
+
+   For client/frontend-only projects:
+   ```bash
+   cp .claude/skills/create-development-documents/PROJECT_TEMPLATE_CLIENT.md PROJECT_SPEC.md
+   ```
+
+   For server/backend-only projects:
+   ```bash
+   cp .claude/skills/create-development-documents/PROJECT_TEMPLATE_SERVER.md PROJECT_SPEC.md
    ```
 
 2. **Fill in your project details**
