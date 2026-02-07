@@ -1,6 +1,6 @@
 ---
 name: create-development-documents
-description: Create development documents described in CLAUDE.md.
+description: Create development documents in accordance with the specification defined in this SKILL.md.
 allowed-tools: Read, Write, Edit, Grep, Glob
 ---
 
