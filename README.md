@@ -2,6 +2,8 @@
 
 ## How to use
 
+> **Note**: The base codes of the project is supposed to be created by developers in advance. Claude Code supports implementations on the base code.
+
 ```bash
 # Clone this repository in your project
 $ git submodule add https://github.com/yutaro1204/cc-dev-config.git .claude
