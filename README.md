@@ -6,7 +6,7 @@
 
 ```bash
 # Clone this repository in your project
-$ git submodule add https://github.com/yutaro1204/project-kernel.git .claude
+$ git submodule add https://github.com/yutaro1204/project-kernel.git .project-kernel
 
 # Create documents
 $ cp .claude/skills/create-development-documents/PROJECT_TEMPLATE.md PROJECT_SPEC.md
