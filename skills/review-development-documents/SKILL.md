@@ -2,6 +2,7 @@
 name: review-development-documents
 description: Review development documents against implementation (technology and domain agnostic)
 allowed-tools: Read, Write, Edit, Grep, Glob
+disable-model-invocation: true
 ---
 
 # Generic Development Documents Review
