@@ -11,7 +11,7 @@ $ cp .claude/skills/create-development-documents/PROJECT_TEMPLATE.md PROJECT_SPE
 $ claude
 > /create-development-documents
 > /review-development-documents
-> Create CLAUDE.md referencing development documents in docs directory. CLAUDE.md contents are shortened version of development documents and they should be easy for Claude Code to understand the structure of this project.
+> Create CLAUDE.md referring to development documents in docs directory. CLAUDE.md contents are shortened version of development documents and they should be easy for Claude Code and developers to understand the structure of this project.
 
 # Start development
 $ claude
