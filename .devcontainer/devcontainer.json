@@ -1,12 +1,12 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/ubuntu
 {
-	"name": "cc-dev-container",
+	"name": "project-kernel-dev-container",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"build": {
 		"dockerfile": "Dockerfile"
 	},
-	"runArgs": ["--name", "cc-dev-container"]
+	"runArgs": ["--name", "project-kernel-dev-container"]
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},

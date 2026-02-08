@@ -1,4 +1,4 @@
-# CC Dev Config
+# Project Kernel
 
 ## How to use
 
@@ -6,7 +6,7 @@
 
 ```bash
 # Clone this repository in your project
-$ git submodule add https://github.com/yutaro1204/cc-dev-config.git .claude
+$ git submodule add https://github.com/yutaro1204/project-kernel.git .claude
 
 # Create documents
 $ cp .claude/skills/create-development-documents/PROJECT_TEMPLATE.md PROJECT_SPEC.md
