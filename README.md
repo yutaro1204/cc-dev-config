@@ -6,13 +6,14 @@
 
 ```bash
 # Clone this repository in your project
-$ git submodule add https://github.com/yutaro1204/project-kernel.git .project-kernel
+$ git submodule add https://github.com/yutaro1204/project-kernel.git project-kernel
 
 # Create documents
 $ cp .claude/skills/create-development-documents/PROJECT_TEMPLATE.md PROJECT_SPEC.md
-$ claude
-> /create-development-documents
-> /review-development-documents
+$ claude --plugin-dir project-kernel
+> /project-kernel:hello-world # Check if the plugin is successfully installed.
+> /project-kernel:create-development-documents
+> /project-kernel:review-development-documents
 > Create CLAUDE.md referring to development documents in docs directory. CLAUDE.md contents are shortened version of development documents and they should be easy for Claude Code and developers to understand the structure of this project.
 
 # Start development
@@ -52,7 +53,14 @@ Add permissions to settings.json if there are files and directories Claude Code 
 ```json
   // settings.json
   "permissions": {
-    "deny": ["Read(.env*)"]
+    "deny": [
+      "Read(.env*)",
+      "Write(.env*)",
+      "Edit(.env*)",
+      "Glob(.env*)",
+      "Grep(.env*)",
+      // "Bash(*)" if needed
+    ]
   }
 ```
 
